@@ -9,9 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 
 import { DataViewModule } from 'primeng/dataview';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, RecipesListComponent],
+  declarations: [AppComponent, RecipesListComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, DataViewModule],
   providers: [],
   bootstrap: [AppComponent],
