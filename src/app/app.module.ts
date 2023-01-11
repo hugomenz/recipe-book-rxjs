@@ -6,13 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { RecipesListComponent } from './recipes-list/recipes-list.component';
+import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './home/home.component';
+import { RecipesListComponent } from './recipes-list/recipes-list.component';
 
 import { DataViewModule } from 'primeng/dataview';
-import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
-import { HeaderComponent } from './core/header/header.component';
+import { PanelModule } from 'primeng/panel';
+import { DropdownModule } from 'primeng/dropdown';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { RatingModule } from 'primeng/rating';
+import { RippleModule } from 'primeng/ripple';
+import { RecipesService } from './core/services/recipes.service';
 
 @NgModule({
   declarations: [
@@ -23,15 +29,20 @@ import { HeaderComponent } from './core/header/header.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    BrowserAnimationsModule,
     DataViewModule,
-    RatingModule,
+    PanelModule,
+    DialogModule,
+    DropdownModule,
+    InputTextModule,
     ButtonModule,
+    RippleModule,
+    RatingModule,
+    FormsModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [RecipesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
