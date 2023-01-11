@@ -10,6 +10,8 @@ import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 
+import { RecipesService } from './core/services/recipes.service';
+
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
@@ -18,7 +20,6 @@ import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
-import { RecipesService } from './core/services/recipes.service';
 
 @NgModule({
   declarations: [
