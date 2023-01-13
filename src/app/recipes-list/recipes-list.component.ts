@@ -1,12 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subject, Subscription, takeUntil } from 'rxjs';
-import { Recipe } from '../core/model/recipe';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RecipesService } from '../core/services/recipes.service';
 
 @Component({
   selector: 'app-recipes-list',
   templateUrl: './recipes-list.component.html',
   styleUrls: ['./recipes-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RecipesListComponent implements OnInit {
   recipes$ = this.service.recipes$;
